@@ -26,7 +26,7 @@ var SLIDE_CONFIG = {
     company: 'UX designer <br> <br> <a href="mailto:villarruelemanuel@gmail.com">villarruelemanuel@gmail.com</a><br> @evillarruel',
     mail: 'villarruelemanuel@gmail.com',
     twitter: '@evillarruel',
-    www: 'http://www.villarruelemanuel.com.ar',
+    www: 'http://www.emanuelvillarruel.com.ar',
     github: 'http://github.com/evillarruel'
   }/*, {
     name: 'Second Name',

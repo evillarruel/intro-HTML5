@@ -56,7 +56,7 @@
       <h2>Algunos cambios</h2>
     </hgroup>
     <article>
-      <p>HTML5 cambia la forma de escribir código y organizamos la información de la página.</p>
+      <p>HTML5 cambia la forma de escribir código y organizar la información de la página.</p>
       <ul>
         <li>Más semántica con menos código.  </li>
         <li>Más interactividad sin la necesidad de instalación de plugins y pérdida de rendimiento.</li>
@@ -474,7 +474,7 @@
     </hgroup>
     <article>
       <p>
-        Puede ser que el usuario no utiliza un navegador que soporte HTML5. En este caso, se puede servir versión más simple, o simplemente mostrar una alerta al usuario acerca de la importancia de actualizar el navegador. 
+        Puede ser que el usuario utilice un navegador que <b>no</b> soporte HTML5. En este caso, podemos servir versión más simple, o simplemente mostrar una alerta al usuario acerca de la importancia de actualizar el navegador. 
       </p>
       <h3><a href="http://modernizr.com/">Modernizr</a></h3>
       <pre class="prettyprint" data-lang="javascript">
@@ -609,6 +609,7 @@
           API bastante irregular.
         </li>
       </ul>
+      <a href="https://developer.mozilla.org/en-US/docs/DragDrop/Drag_and_Drop">especificación</a>
     </article>
     <br><br>
     <hgroup>
@@ -626,6 +627,8 @@
         <li>
           El usuario debe autorizar el acceso a esta información.
         </li>
+        <a href="http://www.w3schools.com/html/html5_geolocation.asp">especificación</a>
+        
       </ul>
     </article>
   </slide>
@@ -690,6 +693,244 @@
           No es necesario una petición AJAX constante.
         </li>
       </ul>
+    </article>
+  </slide>
+
+
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/logo-css3.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Algo de CSS3</h2>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>¿Qué es CSS?</h2>
+    </hgroup>
+    <article>
+      <p>CSS es un lenguaje de hojas de estilos creado para controlar el aspecto o presentación de los documentos HTML. CSS es la mejor forma de separar los contenidos y su presentación y es imprescindible para crear páginas web y apps.</p>
+      <p>
+        <ul>
+          <li>Mejora la accesibilidad del documento</li>
+          <li>Reduce la complejidad de su mantenimiento </li>
+          <li>Permite visualizar el mismo documento en infinidad de dispositivos diferentes.</li>
+        </ul>
+      </p>
+      <p>
+        <h3>Lo basico</h3>
+        <img src="images/f0101.gif">
+      </p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Ventajas</h2>
+    </hgroup>
+    <article class="smaller">
+      <p>Una de las ventajas de CSS es que permiten definir diferentes estilos para diferentes dispositivos.</p>
+      <p>
+        <h3>@media</h3>
+        <pre class="prettyprint" data-lang="css">
+        @media print {
+          body { font-size: 10pt }
+        }
+        @media screen {
+          body { font-size: 13px }
+        }
+        @media screen, print {
+          body { line-height: 1.2 }
+        }</pre>
+
+        <pre class="prettyprint" data-lang="html">
+        &lt;link rel="stylesheet" media="(max-width: 800px)" href="example.css" /&gt;</pre>
+        <pre class="prettyprint" data-lang="css">
+        @media (max-width: 600px) {
+          .facet_sidebar {
+            display: none;
+          }
+        }</pre>
+      </p>
+    </article>
+  </slide>
+
+  <slide>
+    <article class="smaller">
+      <h3>Seudo...</h3>
+      <p>
+        <pre class="prettyprint" data-lang="Seudoelementos">
+        :after | ::after
+        :before | ::before
+        :first-letter | ::first-letter
+        :first-line | ::first-line
+        ::selection</pre>
+      </p>
+      <p>
+        <pre class="prettyprint" data-lang="Seudoclases de acción de usuario y enlace">
+        :link
+        :visited
+        :active
+        :hover
+        :focus</pre>
+      </p>
+      <p>
+        <pre class="prettyprint" data-lang="Seudoclase Estados de la UI">
+        :checked
+        :enabled
+        :default
+        :disabled
+        :indeterminate
+        :invalid
+        :optional
+        :required
+        :valid</pre>
+      </p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+        <h2>@import</h2>
+      </hgroup>
+    <article class="smaller">
+      <p>Permite importar reglas desde otras hojas de estilo.</p>
+      <p>
+        <h3>Sintaxis</h3>
+        <pre class="prettyprint" data-lang="css">
+        @import url;                      
+        // or
+        @import url list-of-media-queries;</pre>
+      </p>
+      <p>
+        <h3>Algunos ejemplos</h3>
+        <pre class="prettyprint" data-lang="css">
+        @import url("fineprint.css") print;
+        @import url("bluish.css") projection, tv;
+        @import 'custom.css';
+        @import "common.css" screen, projection;
+        @import url('landscape.css') screen and (orientation:landscape);</pre>
+      </p>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+        <h2>Uso de CSS transforms</h2>
+      </hgroup>
+    <article class="smaller">
+      <p>permiten cambiar la posición del contenido afectado sin interrumpir el flujo normal. Se implementan haciendo uso de un conjunto de propiedades CSS que permiten aplicar transformaciones lineales a elementos HTML. Estas transformaciones incluyen <code>rotar, torcer, escalar y desplazar en plano o en un espacio 3D</code></p>
+      <p>
+        <h3>Sintaxis</h3>
+        <pre class="prettyprint" data-lang="css">
+        .elemento{
+          width:200px;
+          height:100px;
+          background-color:yellow;
+          /* Rotate div */
+          transform:rotate(7deg);
+          -ms-transform:rotate(7deg); /* IE 9 */
+          -webkit-transform:rotate(7deg); /* Opera, Chrome, and Safari */
+        }</pre>
+        <a href="http://www.w3schools.com/cssref/trycss3_transform_inuse.htm">ejemplo</a>
+      </p>
+    </article>
+  </slide>
+
+
+
+  <slide>
+    <hgroup>
+        <h2>Animation</h2>
+      </hgroup>
+    <article class="smaller">
+      <p>Las nuevas características de CSS nos permiten añadir efectos de animación a la mayoría de elementos HTML, sin necesidad de Javascript o Flash.</p>
+      <p>
+        <h3>Ejemplo</h3>
+        <pre class="prettyprint" data-lang="html">
+        &lt;div class="elemento"&gt;&lt;/div&gt; </pre>
+      </p>
+    </article>
+  </slide>
+
+
+  <slide>
+    <article class="smaller">
+      <h3>Toda la magia de este lado</h3>
+      <pre class="prettyprint" data-lang="css">
+        .elemento{
+          width:100px;
+          height:100px;
+          background:#FF0000;
+          position:absolute;
+          top:0;
+        }
+        /* Para navegadores webkit */
+        @-webkit-keyframes mover_caja{
+          0%{left:90%;}
+          50%{left:10%;}
+          100%{left:90%;}
+        }
+        /* Para Firefox */
+        @-moz-keyframes mover_caja{
+          0%{left:90%;}
+          50%{left:10%;}
+          100%{left:90%;}
+        }
+        /* Llamo a animación */
+        .elemento{
+          -webkit-animation:mover_caja 5s infinite;
+          -moz-animation:mover_caja 5s infinite;
+        }</pre>
+        <a href="http://webintenta.com/userfiles/2012/01/ej29112011_17/css3animation.php"> ejemplo</a>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+        <h2>Transitions</h2>
+      </hgroup>
+    <article class="smaller">
+      <p>Las transiciones en CSS3 funcionan de un modo similar a las animaciones. Pewrmite realizar transiciones con CSS3 nos permite incorporar una animación al cambiar de un estilo a otro. Deberemos especificar:</p>
+    <ul> 
+      <li>La propiedad CSS a la que deseamos agregar un efecto.</li>
+      <li>La duración del efecto.</li>
+    </ul>
+      <p>
+        <h3>Ejemplo</h3>
+        <pre class="prettyprint" data-lang="html">
+        &lt;a  href="#" class="elemento"&gt;Ver ejemplo&lt;/a&gt; </pre>
+      </p>
+    </article>
+  </slide>
+
+  <slide>
+    <article class="smaller">
+      <h3>Toda la magia de este lado</h3>
+      <pre class="prettyprint" data-lang="css">
+        a {
+          padding: 5px 10px;
+          background: #9c3;
+        }
+        a:hover {
+          background: #333;
+        }
+      a {
+        padding: 5px 10px;
+        background: #9c3;
+        -webkit-transition-property: background;
+        -webkit-transition-duration: 1s;
+        -webkit-transition-timing-function: ease;
+        -moz-transition-property: background;
+        -moz-transition-duration: 1s;
+        -moz-transition-timing-function: ease;
+        }
+      a:hover {
+        background: #333;
+      }</pre>
+        <a href="http://webintenta.com/uploads/Files/122011/ej29112011_17/css3transition.php"> ejemplo</a>
     </article>
   </slide>
 
