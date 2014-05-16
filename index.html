@@ -1,71 +1,766 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Intro-html5 by evillarruel</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Intro-html5</h1>
-        <p>Introducción a HTML5, estructura semántica, nuevos elementos y buenas practicas</p>
-
-        <p class="view"><a href="https://github.com/evillarruel/intro-HTML5">View the Project on GitHub <small>evillarruel/intro-HTML5</small></a></p>
+<head>
+  <title>Introduccion al HTML5</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
 
 
-        <ul>
-          <li><a href="https://github.com/evillarruel/intro-HTML5/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/evillarruel/intro-HTML5/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/evillarruel/intro-HTML5">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<slides class="layout-widescreen">
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+  <slide class="logoslide nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/html5-e1348189995482.jpg"></span>
+    </article>
+  </slide>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/HTML5_Badge_64.png"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+  <slide>
+    <hgroup>
+      <h2>¿Qué es HTML5?</h2>
+    </hgroup>
+    <article>
+      <p>De acuerdo con Web W3C se basa en 3 pilares:</p>
+      <ul>
+        <li>Un esquema para localizar fuentes de información en la Web. </li>
+        <li>Un protocolo de acceso para acceder a estas fuentes, en la actualidad el HTTP.</li>
+        <li>Un <b>lenguaje de hipertexto</b>, para facilitar la navegación de información.</li>
+      </ul>
+    </article>
+  </slide>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+  <slide>
+    <hgroup>
+      <h2>Algunos cambios</h2>
+    </hgroup>
+    <article>
+      <p>HTML5 cambia la forma de escribir código y organizamos la información de la página.</p>
+      <ul>
+        <li>Más semántica con menos código.  </li>
+        <li>Más interactividad sin la necesidad de instalación de plugins y pérdida de rendimiento.</li>
+        <li>Código interoperables, listo para futuros dispositivos y facilita la reutilización de la información en varias formas.</li>
+      </ul>
+      <p>HTML5 se está creando para que sea compatible con los navegadores más recientes, lo que permite de inmediato el uso de las nuevas características.</p>
+    </article>
+  </slide>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+  <slide>
+    <hgroup>
+      <h2>Motores de renderizado</h2>
+    </hgroup>
+    <article>
+      Hay una gran diversidad de dispositivos de acceso a Internet. Entre ellos, hay una serie de tabletas, teléfonos inteligentes, ordenadores, etc.
+      <br>
+      <img src="images/motores.png">
+      <p><b>No todo es perfecto.</b> Actualmente Webkit es el motor más compatible con los estándares HTML5.</p>
+    </article>
+    <hgroup>
+      <h2>Que pasa con IE?</h2>
+    </hgroup>
+    <article>
+      <p></p>
+    </article>
+  </slide>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/evillarruel">evillarruel</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
+  <slide style=" text-align: center; ">
     
-  </body>
+    <figure>
+      <img src="images/superhero_fight_2.jpg" style="margin-top: 30px;">
+      <figcaption>IE7 / EI8  -  Casi no tiene soporte para HTML5</figcaption>
+    </figure>
+  </slide>
+
+  <slide hidden>
+    Hidden slides are left out of the presentation.
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Cambios de sintaxis HTML5</h2>
+      <h3></h3>
+    </hgroup>
+    <article>
+      <h3>Doctype XHTML1.1</h3>
+      <pre class="prettyprint" data-lang="xhtml1">
+      &lt;! DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</pre>
+      <pre class="prettyprint" data-lang="html5">
+      &lt;! DOCTYPE html&gt;</pre>
+    </article>
+
+    <article>
+      <h3>Charset metatag</h3>
+      <pre class="prettyprint" data-lang="xhtml1">
+      &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;</pre>
+      <pre class="prettyprint" data-lang="html5">
+      &lt;meta charset="utf-8"&gt;</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Cambios de sintaxis HTML5</h2>
+      <h3></h3>
+    </hgroup>
+    <article>
+      <h3>Tag LINK</h3>
+      <pre class="prettyprint" data-lang="xhtml1">
+      &lt;script type="text/javascript" src="jquery.js"&gt;&lt;/script&gt;
+      &lt;link rel="stylesheet" type="text/css" href="styles.css" /&gt; </pre>
+      <pre class="prettyprint" data-lang="html5">
+      &lt;script src="jquery.js"&gt;&lt;/script&gt;
+      &lt;link rel="stylesheet" href="styles.css" /&gt;</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <article>
+      <pre class="prettyprint" data-lang="Nuestra página en HTML5">
+      &lt;! DOCTYPE html&gt;
+      &lt;html lang="es"&gt;
+      &lt;head&gt;
+          &lt;meta charset="utf-8" /&gt;
+          &lt;title&gt;Estructura básica de una pagina web en HTML5&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+              &lt;header&gt;
+                  &lt;nav&gt;
+                      &lt;a href="inicio.html"&gt;Inicio&lt;/a&gt;
+                      &lt;a href="nosotros.html"&gt;Nosotros&lt;/a&gt;
+                      &lt;a href="opcion.html"&gt;Opcion&lt;/a&gt;
+                  &lt;/nav&gt;
+              &lt;/header&gt;
+              &lt;!-- Cuerpo de la pagina --&gt;
+              &lt;footer&gt;
+                  &lt;p&lt;Derechos reservados&gt;/p&gt;
+              &lt;/footer&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;</pre>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>¿Se puede usar ya todo?</h2>
+    </hgroup>
+    <article>
+      <p>Hay partes de HTML5 que son:</p>
+      <ul>
+        <li>Fiables desde ya</li>
+        <li>Apenas utilizables</li>
+        <li>Por desgracia, extrañas</li>
+        <li>Interesantes pero ignorables</li>
+        <li>Fundamentalmente para experimentar con aplicaciones web</li>
+      </ul>
+
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/HTML5_Badge_64.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Adiós a la divitis</h2>
+      <h3>Nuevos tags</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>&lt;header&gt;</h2>
+    </hgroup>
+    <article>
+      <p class="gray2">La W3C lo define:</p>
+      <p>
+        El elemento header representa un grupo de ayudas introductorias o de navegación.
+      </p>
+      <ul>
+        <li>Logo y título</li>
+        <li>Navegación</li>
+        <li>Uno o más encabezados</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>&lt;nav&gt;</h2>
+    </hgroup>
+    <article>
+      <p class="gray2">La W3C lo define:</p>
+      <p>
+        Representa una sección de una página que enlaza a otras páginas o partes de una página: una sección con enlaces para navegar.
+      </p>
+      <ul>
+        <li>Puede haber varios en cada página</li>
+        <li>Las migas de pan son un <code>&lt;nav&gt;</code></li>
+        <li>Un blogroll no es un <code>&lt;nav&gt;</code></li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>&lt;footer&gt;</h2>
+    </hgroup>
+    <article>
+      <p class="gray2">La W3C lo define:</p>
+      <p>
+        Representa un footer para el contenido de sección [...] más cercano que le anteceda. Suele contener información adicional sobre su sección [...].
+      </p>
+      <ul>
+        <li>Puede haber varios en cada página</li>
+        <li>Copyright, links, etc.</li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>&lt;article&gt;</h2>
+    </hgroup>
+    <article>
+      <p class="gray2">La W3C lo define:</p>
+      <p>
+        Representa una composición autocontenida en un documento, página [...] que es, en principio, distribuible o reutilizable independientemente.
+      </p>
+      <ul>
+        <li>Artículos de un blog o periódico <code class="red">(obvio)</code></li>
+        <li>Comentarios, productos <code class="red">(no tan obvio)</code></li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>&lt;section&gt;</h2>
+    </hgroup>
+    <article>
+      <p class="gray2">La W3C lo define:</p>
+      <p>
+        Representa una sección genérica de un documento o aplicación. Una sección [...] es una agrupación temática de contenido, normalmente con un encabezado.
+      </p>
+      <ul>
+        <li>Agrupa contenido semánticamente</li>
+        <li>Sirve para páginas y artículos</li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>&lt;aside&gt;</h2>
+    </hgroup>
+    <article>
+      <p class="gray2">La W3C lo define:</p>
+      <p>
+        Representa una sección de una página consistente en contenido relacionado tangencialmente con el contenido que le rodea, y que se podría considerar separado de dicho contenido.
+      </p>
+      <ul>
+        <li>Sidebar <code class="red">(obvio)</code></li>
+        <li>Anuncios o "fat footer" <code class="red">(no tan obvio)</code></li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>&lt;hgroup&gt;</h2>
+    </hgroup>
+    <article>
+      <p class="gray2">La W3C lo define:</p>
+      <p>
+        Representa el encabezado de una sección. [...] Se utiliza para agrupar una serie de h1-h6 cuando el encabezado tiene múltiples niveles, como subtítulos, títulos alternativos, o slogans.
+      </p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>&lt;figure&gt;</h2>
+    </hgroup>
+    <article>
+      <p class="gray2">La W3C lo define:</p>
+      <p>
+        Representa un contenido fluído, opcionalmente con una leyenda, autocontenido [...].
+      </p>
+    </article>
+    <br>
+    <hgroup>
+      <h2>&lt;figcaption&gt;</h2>
+    </hgroup>
+    <article>
+      <p class="gray2">La W3C lo define:</p>
+      <p>
+        Representa un una leyenda para el resto de contenidos de su elemento figure padre.
+      </p>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>&lt;figure&gt;</h2>
+    </hgroup>
+    <article>
+      <p class="gray2">La W3C lo define:</p>
+      <p>
+        Representa o una hora en un reloj de 24 horas, o una fecha precisa en el calendario gregoriano.
+      </p>
+    </article>
+    <br>
+    <hgroup>
+      <h2>&lt;datetime&gt;</h2>
+    </hgroup>
+    <article>
+      <p class="gray2">La W3C lo define:</p>
+      <p>
+        Permite poner el contenido de un time en un formato que una máquina pueda entender.
+      </p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>&lt;mark&gt;</h2>
+    </hgroup>
+    <article>
+      <p class="gray2">La W3C lo define:</p>
+      <p>
+        Representa una porción de texto [...] marcada o destacada con un propósito de referencia, debido a su relevancia en otro contexto.
+      </p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Tags que fueron cambiando con el tiempo</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>
+          <code>&lt;cite&gt;</code> sólo se puede utilizar para marcar la obra, no al autor. Rompe la retrocompatibilidad con anteriores versiones de HTML, y ha generado mucho debate.
+        </li>
+        <li>
+          <code>&lt;em&gt; &lt;i&gt;</code>: <code>&lt;em&gt;</code> denota énfasis, mientras que <code>&lt;i&gt;</code> marca una cursiva con fines estilísticos, por ejemplo un extranjerismo.
+        </li>
+        <li>
+          <code>&lt;strong&gt; &lt;b&gt;</code> : <code>&lt;strong&gt;</code> denota importancia, mientras que <code>&lt;b&gt;</code> marca una negrita con fines estilísticos, sin una importancia especial
+        </li>
+        <li>
+          <code>&lt;small&gt;</code> para marcar la "letra pequeña", por ejemplo copyrights, aspectos legales…
+        </li>
+      </ul>
+
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>&lt;audio&gt; &lt;video&gt;</h2>
+    </hgroup>
+    <article>
+      <p>
+        Una nueva forma de incrustar vídeos y audios de forma nativa:
+      </p>
+      <pre class="prettyprint" data-lang="html">
+      &lt;audio src="cancion..." &gt; &lt;/audio&gt;
+      &lt;video src="video..." &gt; &lt;/video&gt;</pre>
+    </article>
+    <h3>Attr</h3>
+    <code>&lt;autoplay&gt;</code> <br>
+    <code>&lt;controls&gt;</code> <br>
+    <code>&lt;poster&gt;</code> <br>
+    <code>&lt;width&gt; &lt;height&gt;</code> <br>
+    <code>&lt;loop&gt;</code> <br>
+    <code>&lt;preload&gt;</code> <br>
+    <code>&lt;src&gt;</code>
+  </slide>
+
+  <slide>
+    <article>
+      <hgroup>
+        <h2>Algunas otras cosas nuevas</h2>
+      </hgroup>
+      <h3>
+        Inputs
+      </h3>
+      <pre class="prettyprint" data-lang="html">
+        &lt;input type="email"&gt;   
+        &lt;input type="url"&gt;   
+        &lt;input type="tel"&gt;
+        &lt;input type="search"&gt;   
+        &lt;input type="number"&gt;   
+        &lt;input type="range"&gt;   
+        &lt;input type="color"&gt;</pre>
+      <h3>
+        Controlador de tiempo
+      </h3>
+      <pre class="prettyprint" data-lang="html">
+        &lt;input type="date"&gt;   
+        &lt;input type="time"&gt;   
+        &lt;input type="datetime"&gt;   
+        &lt;input type="month"&gt;   
+        &lt;input type="week"&gt;</pre>
+    </article>
+  </slide>
+
+
+  <slide>
+    <article>
+      <hgroup>
+        <h2>Algunas otras cosas nuevas</h2>
+      </hgroup>
+      <h3>
+        Input list
+      </h3>
+      <pre class="prettyprint" data-lang="html">
+        // Permite añadir opciones, de forma similar a un select
+        &lt;input type="text" list="payasos"&gt;
+        &lt;datalist id="payasos"&gt;
+            &lt;option value="Miliki"&gt;
+            &lt;option value="Fofó"&gt;
+            &lt;option value="Gaby"&gt;
+        &lt;/datalist&gt;</pre>
+        <h3>Attr</h3>
+        <code>"autofocus", "placeholder", "min", "max", "step", "required"</code>
+        <code>"pattern"</code> permite añadir una expresión regular<br><br>
+        <pre class="prettyprint" data-lang="html">
+        // Un ejemplo
+        &lt;label for="dni"&gt;DNI:&lt;/label&gt;
+        &lt;input pattern="[0-9]{8}" id="dni" placeholder="Ingresa tu DNI"&gt;</pre>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Hasta acá todo bien! pero qué pasa con IE6, IE7, IE8 ?</h2>
+    </hgroup>
+    <article style=" text-align: center; ">
+      <img src="images/RalphWiggum.png" style="margin-top: 30px;">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Soporte HTML5  -  <span class="red">Técnicas de detección</span></h2>
+    </hgroup>
+    <article>
+      <p>
+        Puede ser que el usuario no utiliza un navegador que soporte HTML5. En este caso, se puede servir versión más simple, o simplemente mostrar una alerta al usuario acerca de la importancia de actualizar el navegador. 
+      </p>
+      <h3><a href="http://modernizr.com/">Modernizr</a></h3>
+      <pre class="prettyprint" data-lang="javascript">
+      if (Modernizr.geolocation) {
+          // Aceptar la función
+      } else {
+          // No aceptar la función de la prueba. 
+      }</pre>
+      <h3><a href="https://code.google.com/p/html5shiv/">HTML5 shiv</a></h3>
+      <pre class="prettyprint" data-lang="html">
+      &lt;!--[if lt IE 9]&gt;
+      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script>
+      &lt;![endif]--&gt;</pre>
+    </article>
+  </slide>
+
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/HTML5_Badge_64.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Otras APIs de HTML5</h2>
+    </hgroup>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>&lt;canvas&gt; &lt;svg&gt;</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>
+          Canvas: mapa de bits.
+        </li>
+        <li>
+          SVG: vectores.
+        </li>
+        <li>
+          Se puede interactuar con ellos.
+        </li>
+        <li>
+          Canvas no crea nodos en el DOM, SVG sí.
+        </li>
+        <li>
+          Canvas tiene más problemas de accesibilidad.
+        </li>
+      </ul>
+      <a href="http://www.w3schools.com/html/html5_canvas.asp">Canvas</a> - <a href="http://www.w3schools.com/html/html5_svg.asp">SVG</a>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Web Storage</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>
+          Establecer un valor: <code>localStorage.setItem('clave','valor');</code>
+        </li>
+        <li>
+          Recuperar un valor: <code>localStorage.getItem('clave');</code>
+        </li>
+        <li>
+          Eliminar un valor: <code>localStorage.removeItem('clave');</code>
+        </li>
+        <li>
+          Limpiar el Storage: <code>localStorage.clear();</code>
+        </li>
+      </ul>
+    </article>
+    <br><br>
+    <hgroup>
+      <h2>Web SQL</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>
+          Almacena BBDD en tu navegador
+        </li>
+        <li>
+          El desarrollo se ha abandonado y podría desaparecer de la especificación
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Offline</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>
+         Navegar sin conexión
+        </li>
+        <li>
+          Recuperar un valor: <code>localStorage.getItem('clave');</code>
+        </li>
+        <li>
+          Una nueva Cache nos permite acceder a páginas sin estar conectados
+
+        </li>
+        <li>
+          IE... no no no!
+        </li>
+      </ul>
+      <pre class="prettyprint" data-lang="html">
+        // Tenemos que definir el "manifest.cache"
+        &lt;html manifest=manifest.cache&gt;</pre>
+      <pre class="prettyprint" data-lang="manifest.cache">
+        CACHE MANIFEST 
+        index.html 
+        styles.css 
+        images/logo.png </pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Drag and drop</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>
+          Podemos arrastrar cosas y soltarlas!
+        </li>
+        <li>
+          "Rescatado" de Internet Explorer 5.
+        </li>
+        <li>
+          API bastante irregular.
+        </li>
+      </ul>
+    </article>
+    <br><br>
+    <hgroup>
+      <h2>Geolocalización</h2>
+    </hgroup>
+    <article>
+      <p>Poniendo al usuario en el mapa</p>
+      <ul>
+        <li>
+          Tiene poco que ver con el resto de la especificación HTML5.
+        </li>
+        <li>
+          Basado principalmente en GPS.
+        </li>
+        <li>
+          El usuario debe autorizar el acceso a esta información.
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Web Messages</h2>
+    </hgroup>
+    <article>
+      <p>Comunicación entre dominios</p>
+      <ul>
+        <li>
+          Una API para la comunicación segura entre dominios.
+        </li>
+        <li>
+          Envia mensajes de texto (instrucciones) de un dominio a otro.
+        </li>
+        <li>
+          Es la base para los Web Workers y Web Sockets.
+        </li>
+      </ul>
+    </article>
+    <br>
+    <hgroup>
+      <h2>Web Workers</h2>
+    </hgroup>
+    <article>
+      <p>Duendes que trabajan por la noche</p>
+      <ul>
+        <li>
+          Una API para lanzar procesos en segundo plano.
+        </li>
+        <li>
+          El usuario puede seguir haciendo otras cosas.
+        </li>
+        <li>
+          Pueden hacer peticiones XMLHttpRequest, pero no manipular el DOM.
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Web Sockets</h2>
+    </hgroup>
+    <article>
+      <p>El servidor llama a tu puerta</p>
+      <ul>
+        <li>
+          Nueva forma de comunicación bidireccional.
+        </li>
+        <li>
+          El socket se mantiene abierto hasta que lo cerremos explícitamente.
+        </li>
+        <li>
+          El servidor puede enviarnos cosas a través del socket.
+        </li>
+        <li>
+          No es necesario una petición AJAX constante.
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+<!--
+  <slide>
+    <hgroup>
+      <h2 style="text-align: center;">Gracias por el aguante!!!</h2>
+    </hgroup>
+    <article style=" text-align: center; ">
+      <img src="images/aguante.jpg" style="margin-top: 30px;">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Code Slide (Smaller Font)</h2>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+// Say hello world until the user starts questioning
+// the meaningfulness of their existence.
+function helloWorld(world) {
+  for (var i = 42; --i &gt;= 0;) {
+    alert('Hello ' + String(world));
+  }
+}</pre>
+<pre class="prettyprint" data-lang="css">
+&lt;style&gt;
+  p { color: pink }
+  b { color: blue }
+&lt;/style&gt;
+</pre>
+<pre class="prettyprint" data-lang="html">
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+  &lt;title>My Awesome Page&lt;/title>
+&lt;/head>
+&lt;body>
+  &lt;p&gt;Hello world&lt;/p&gt;
+&lt;body>
+&lt;/html>
+</pre>
+    </article>
+  </slide>
+-->
+
+  <slide class="thank-you-slide segue nobackground">
+    <aside class="gdbar right"><img src="images/HTML5_Badge_64.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <h2>Gracias por el aguante. </h2>
+      <p></p>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+    </p>
+  </slide>
+
+  <slide class="logoslide  nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/html5-e1348189995482.jpg"></span>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
 </html>
