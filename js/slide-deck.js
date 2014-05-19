@@ -350,8 +350,7 @@ SlideDeck.prototype.loadConfig_ = function(config) {
           '<a href="http://twitter.com/' + p.twitter + '">' +
           p.twitter + '</a>' : '';
 
-      var www = p.www ? '<span>www</span><a href="' + p.www +
-                        '">' + p.www.replace(/https?:\/\//, '') + '</a>' : '';
+      var www = p.www ? '<span>LinkedIn</span><a href="http://www.linkedin.com/pub/emanuel-villarruel/3a/a89/564">' + p.www.replace(/https?:\/\//, '') + '</a>' : '';
 
       var github = p.github ? '<span>github</span><a href="' + p.github +
           '">' + p.github.replace(/https?:\/\//, '') + '</a>' : '';

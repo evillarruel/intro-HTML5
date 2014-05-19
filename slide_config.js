@@ -1,7 +1,7 @@
 var SLIDE_CONFIG = {
   // Slide settings
   settings: {
-    title: 'Introducción a HTML5',
+    title: 'Introducción a HTML5 y CSS3',
     subtitle: '',
     //eventInfo: {
     //  title: 'Google I/O',
@@ -23,10 +23,10 @@ var SLIDE_CONFIG = {
   // Author information
   presenters: [{
     name: 'Emanuel Villarruel',
-    company: 'UX designer <br> <br> <a href="mailto:villarruelemanuel@gmail.com">villarruelemanuel@gmail.com</a><br> @evillarruel',
+    company: 'Designer <br> <br> <a href="mailto:villarruelemanuel@gmail.com">villarruelemanuel@gmail.com</a><br> @evillarruel',
     mail: 'villarruelemanuel@gmail.com',
-    twitter: '@evillarruel',
-    www: 'http://www.emanuelvillarruel.com.ar',
+    twitter: 'e_villarruel',
+    www: 'emanuel-villarruel',
     github: 'http://github.com/evillarruel'
   }/*, {
     name: 'Second Name',
